@@ -47,3 +47,30 @@ Grid.prototype.checkColumn = function(index){
 
   return this.checkArray(newColumnArray);
 }
+
+Grid.prototype.checkResult = function(){
+  var resultArray = [];
+
+  for (var k = 0; k<9; k ++){
+    var rowResult = this.checkArray(this["row"+k]);
+    resultArray.push(rowResult);
+  }
+
+  for (var i = 0; i<9; i++){
+    var result = this.checkColumn(i);
+    resultArray.push(result);
+  }
+
+  console.log(resultArray);
+  for(var j=0; j<resultArray.length; j++){
+    if (resultArray[j] == false){
+      return false;
+    }
+    else{
+      if(j == 8){
+        return true;
+      }
+    }
+  }
+
+}
