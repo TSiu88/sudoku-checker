@@ -3,9 +3,6 @@
 //   * Example Output: [5, 3, 2, 1, 4, 6, 7, 8, 9]
 
 
-
-
-
 export function Grid(){
   this.row0 = [];
   this.row1 = [];
@@ -18,24 +15,35 @@ export function Grid(){
   this.row8 = [];
 
 }
+
 Grid.prototype.addToRow = function(string){
-  return string.split(" ")
+  return string.split(" ");
 }
 
-Grid.prototype.checkRow = function(row) {
-  row.sort(function(a, b){return a - b});
-  var checknumber = 1
-  for(var i=0; i<row.length; i ++) {
-    if (parseInt(row[i]) ==checknumber){
-    checknumber ++
-    if (i == 8) {
-      return true
+Grid.prototype.checkArray = function(array) {
+  var temp = array.slice(0);
+  temp.sort(function(a, b){return a - b});
+  var checknumber = 1;
+  for(var i=0; i<temp.length; i ++) {
+    if (parseInt(temp[i]) ==checknumber){
+      checknumber ++;
+      if (i == 8) {
+        return true;
+      }
+    }
+    else {
+      return false;
     }
   }
-  else {
-    return false
-  }
-  }
 }
 
-Grid.prototype.checkColumn
+Grid.prototype.checkColumn = function(index){
+  var newColumnArray = [];
+  for (var i = 0; i<9; i ++){
+    newColumnArray.push(this["row"+i][index]);
+  }
+
+  console.log(newColumnArray);
+
+  return this.checkArray(newColumnArray);
+}
