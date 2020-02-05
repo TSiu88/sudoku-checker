@@ -10,11 +10,45 @@ import { Grid } from './scripts';
 
 // var rowArray = [5, 3, 2, 1, 4, 6, 7, 8]
 
+// Something with notation of backtics not working
+function inputToString(){
+  for (var g =0; g< 9; g ++){
+    var tempString = "";
+    $(`'input[class="row${g}"]'`).each(function (){
+      tempString += $(this).val() + " ";
+    })
+
+  `grid.row${g}` = grid.addToRow(tempString.toString);
+  }
+}
 
 $(document).ready(function(){
   $("#submit").click(function(event){
     event.preventDefault();
     var grid = new Grid();
+    
+
+    // $('input[class="row0"]').each(function () {
+    //   console.log($(this).val());
+    //   tempString += $(this).val() + " ";
+    // });
+
+    // console.log("string", tempString);
+    // grid.row0 = grid.addToRow(tempString.toString());
+    
+    inputToString();
+    console.log(grid.row0);
+    // $('input[class="row1"]').each(function () {
+    //   console.log($(this).val());
+  });
+});
+// });
+
+    // console.log(grid.row0);
+    // console.log("row", grid.checkArray(grid.row0));
+    // console.log("col", grid.checkColumn(0));
+    // console.log("total result", grid.checkResult());
+
     // var string = "7 5 9 4 6 2 8 1 3";
     // grid.row0 = grid.addToRow(string);
     // var string1 = "4 6 3 5 1 8 2 9 7";
@@ -33,25 +67,3 @@ $(document).ready(function(){
     // grid.row7 = grid.addToRow(string7);
     // var string8 = "8 7 6 3 5 9 1 2 4";
     // grid.row8 = grid.addToRow(string8);
-
-    // console.log(grid.row0);
-    // console.log("row", grid.checkArray(grid.row0));
-    // console.log("col", grid.checkColumn(0));
-    // console.log("total result", grid.checkResult());
-
-    var tempString = "";
-
-    $('input[class="row0"]').each(function () {
-      console.log($(this).val());
-      tempString += $(this).val() + " ";
-    });
-
-    console.log("string", tempString);
-    grid.row0 = grid.addToRow(tempString.toString());
-    console.log(grid.row0);
-
-    $('input[class="row1"]').each(function () {
-      console.log($(this).val());
-  });
-  });
-});
