@@ -1,52 +1,70 @@
-# _{Application Name}_
+# _[Sudoku Checker](https://github.com/TSiu88/sudoku-checker)_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Checks if a Sudoku Solution is Correct, 02.04.2020_
 
-#### By _**{List of contributors}**_
+#### By _**Tiffany Siu, Jiwon Han, and Steven Fleming**_
+
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip) 
+![LastCommit](https://img.shields.io/github/last-commit/tsiu88/sudoku-checker)
+![Languages](https://img.shields.io/github/languages/top/tsiu88/sudoku-checker)
+[![MIT license](https://img.shields.io/badge/License-MIT-orange.svg)](https://lbesson.mit-license.org/)
+
+---
+## Table of Contents
+1. [Description](#description)
+2. [Setup/Installation Requirements](#setup/installation-requirements)
+    - [Requirements to Run](#requirements-to-run)
+    - [Instructions](#instructions)
+    - [Other Technologies Used](#other-technologies-used)
+3. [Known Bugs](#known-bugs)
+4. [Support and Contact Details](#support-and-contact-details)
+5. [License](#license)
+---
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+This program was created for Epicodus Intro to Programming and C#/React course.  It checks if a sudoku row has every row corect and no duplicates to show that the row is valid.  It can then be applied to an entire puzzle to ensure the solution is valid.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+### Requirements to Run
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _Web Browser_
+* _Webpack_
+* _Node.js_
+* _NPM_
 
-## Specifications
+### Instructions
 
-* The program creates a row of length 9 from given grid
-  * Example Input: 5, 3, 2, 1, 4, 6, 7, 8, 9
-  * Example Output: [5, 3, 2, 1, 4, 6, 7, 8, 9]
-* Check if a row array contains number 1-9 without repeats
-  * Example Input: [5, 3, 2, 1, 4, 6, 7, 8, 9]
-  * Example Output: true
-* Check if an index of each array contains number 1-9 without repeats to check columns
-  * Example Input: [1], [2], [4], [3], [5], [6], [7], [8], [9]
-  * Example Output: true
-* If row and columns all return true, then puzzle is legal
-  * Example Input: rows=true, columns=true
-  * Example Output: puzzle=legal
+1. Download and install Node.js from the [official website](https://nodejs.org/en/download/)
+2. Clone the [repository](https://github.com/TSiu88/sudoku-checker.git) from my [GitHub page](https://github.com/TSiu88)
+3. Use a command line/Bash to move to the project directory with `cd project-directory`
+4. Run `npm install` to get all dependencies. 
+5. Run `npm run start` to start up the program
+
+
+## Other Technologies Used
+
+* _HTML_
+* _CSS_
+* _Javascript_
+* _JQuery 3.4.1_
+* _Bootstrap 4.4.1_
+* _ESLint_
+* _Babel_
+* _Jest_
+* _Markdown_ 
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_There are currently no known bugs in this program_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
-
-## Technologies Used
-
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_If there are any question or concerns please contact me at my [email](mailto:tsiu88@gmail.com). Thank you._
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*This software is licensed under the MIT license*
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2020 **_Tiffany Siu, Jiwon Han, Steven Fleming_**
